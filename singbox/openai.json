@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+	{
+      "domain_keyword": [
+        "chatgpt",
+		"openai"
+      ]
+	},
+	{
+      "package_name": [
+        "com.openai.chatgpt"
+      ]
+    }
+  ]
+}

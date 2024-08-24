@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "github.com",
+        "cloudflare.com",
+        "bllstudy.top",
+        "fxxk.dedyn.io",
+        "kaiche.tk"
+      ]
+    }
+  ]
+}

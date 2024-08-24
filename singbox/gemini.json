@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "gemini.google.com"
+      ]
+	},
+	{
+      "package_name": [
+        "com.google.android.apps.bard"
+      ]
+    }
+  ]
+}
