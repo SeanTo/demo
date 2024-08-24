@@ -127,7 +127,7 @@
       { "rule_set": "sb_reject","outbound": "block" },
       { "rule_set": "sb_gemini","outbound": "🚀 Gemini" },
       { "rule_set": "geosite-openai","outbound": "🤖 OpenAI" },
-      { "rule_set": "sb_select","outbound": "GLOBAL" },
+      { "rule_set": "sb_select","outbound": "🐸 手动切换" },
       { "rule_set": "sb_proxy","outbound": "🚀 节点选择" },
       { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
