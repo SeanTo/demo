@@ -129,9 +129,9 @@
       { "rule_set": "sb_openai","outbound": "🤖 OpenAI" },
       { "rule_set": "sb_select","outbound": "GLOBAL" },
       { "rule_set": "sb_proxy","outbound": "🚀 节点选择" },
-      { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
-      { "rule_set": "geolocation-!cn", "outbound": "🚀 节点选择" }
+      { "rule_set": "geolocation-!cn", "outbound": "🚀 节点选择" },
+      { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" }
     ],
 	"auto_detect_interface": true,
 	"final": "🐟 漏网之鱼"
