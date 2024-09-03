@@ -5,7 +5,10 @@
       "domain_keyword": [
         "ai.google.dev",
         "alkalimakersuite-pa.clients6.google.com",
-        "makersuite.google.com"
+        "makersuite.google.com",
+		"colab.research.google.com",
+		"generativelanguage.googleapis.com",
+		"content-developerprofiles-pa.googleapis.com"
       ]
     },
     {
@@ -24,7 +27,7 @@
         "gemini.google.com",
         "generativeai.google",
         "proactivebackend-pa.googleapis.com",
-        "apis.google.com"
+		"apis.google.com"
       ]
     },
     {
