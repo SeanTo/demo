@@ -3,12 +3,33 @@
   "rules": [
     {
       "domain_keyword": [
-        "gemini"
+        "ai.google.dev",
+        "alkalimakersuite-pa.clients6.google.com",
+        "makersuite.google.com"
       ]
-	},
-	{
+    },
+    {
+      "domain_keyword": [
+        "gemini",
+        "colab",
+        "developerprofiles",
+        "generativelanguage"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "bard.google.com",
+        "deepmind.com",
+        "deepmind.google",
+        "gemini.google.com",
+        "generativeai.google",
+        "proactivebackend-pa.googleapis.com",
+        "apis.google.com"
+      ]
+    },
+    {
       "package_name": [
-        "^com.google.*$"
+        "^com.google.android.apps.bard"
       ]
     }
   ]
