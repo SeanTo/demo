@@ -29,11 +29,6 @@
         "proactivebackend-pa.googleapis.com",
 		"apis.google.com"
       ]
-    },
-    {
-      "package_name": [
-        "com.google.android.apps.bard"
-      ]
     }
   ]
 }
