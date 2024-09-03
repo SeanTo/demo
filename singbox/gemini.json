@@ -32,7 +32,7 @@
     },
     {
       "package_name": [
-        "^com.google.android.apps.bard"
+        "com.google.android.apps.bard"
       ]
     }
   ]
