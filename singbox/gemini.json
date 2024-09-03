@@ -2,7 +2,7 @@
   "version": 1,
   "rules": [
     {
-      "domain_keyword": [
+      "domain": [
         "ai.google.dev",
         "alkalimakersuite-pa.clients6.google.com",
         "makersuite.google.com",
