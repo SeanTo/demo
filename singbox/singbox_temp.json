@@ -91,8 +91,6 @@
       { "tag": "sb_direct","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/direct.json","download_detour": "direct" },
 	  { "tag": "category-ads","type": "remote","format": "binary","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "direct" },
       { "tag": "sb_reject","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject.json","download_detour": "direct" },
-      { "tag": "sb_gemini", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/gemini.json", "download_detour": "direct" },
-      { "tag": "sb_openai", "type": "remote", "format": "source", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/openai.json", "download_detour": "direct" },
 	  { "tag": "sb_select","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/select.json","download_detour": "direct" },
 	  { "tag": "sb_proxy","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "direct" },
