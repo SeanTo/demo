@@ -3,7 +3,13 @@
   "rules": [
     {
       "domain_keyword": [
-        "browserleaks"
+        "ip"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "itdog.cn",
+        "browserleaks.com"
       ]
     }
   ]
