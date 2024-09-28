@@ -35,7 +35,7 @@
       {"outbound": "any","disable_cache": true,"server": "local-dns"},
       {"clash_mode": "direct","server": "local-dns"},
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
-      {"rule_set": "proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
+      {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
       {"rule_set": "geolocation-!cn","client_subnet": "1.0.1.0","server": "remote-dns"},
       {"rule_set": "geosite-cn","server": "local-dns"}
     ],
