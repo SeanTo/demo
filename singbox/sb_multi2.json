@@ -39,7 +39,7 @@
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
       {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
       {"rule_set": "geolocation-!cn","client_subnet": "1.0.1.0","server": "remote-dns"},
-      {"rule_set": "geosite-cn","server": "local-dns"}
+      {"rule_set": "geosite-cn","client_subnet": "1.0.1.0","server": "remote-dns"}
     ],
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"},
     "final": "remote-dns",
