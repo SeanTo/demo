@@ -4,30 +4,20 @@
     {
       "domain": [
         "ai.google.dev",
-        "alkalimakersuite-pa.clients6.google.com",
-        "makersuite.google.com",
-		"colab.research.google.com",
-		"generativelanguage.googleapis.com",
-		"content-developerprofiles-pa.googleapis.com"
-      ]
-    },
-    {
-      "domain_keyword": [
-        "gemini",
-        "colab",
-        "developerprofiles",
-        "generativelanguage"
-      ]
-    },
-    {
+        "alkalicore-pa.clients6.google.com",
+        "alkalimakersuite-pa.clients6.google.com"
+      ],
       "domain_suffix": [
-        "bard.google.com",
         "deepmind.com",
         "deepmind.google",
-        "gemini.google.com",
         "generativeai.google",
+        "geller-pa.googleapis.com",
+        "generativelanguage.googleapis.com",
         "proactivebackend-pa.googleapis.com",
-		"apis.google.com"
+        "makersuite.google.com",
+        "aistudio.google.com",
+        "bard.google.com",
+        "gemini.google.com"
       ]
     }
   ]

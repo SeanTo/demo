@@ -86,17 +86,17 @@
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "protocol": "quic", "outbound": "block" },
+      { "rule_set": "sb_reject","outbound": "block" },
+      { "rule_set": "category-ads","outbound": "block" },
+      { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
       { "ip_is_private": true, "outbound": "direct" },
       { "rule_set": "sb_direct","outbound": "direct" },
-      { "rule_set": "category-ads","outbound": "block" },
-      { "rule_set": "sb_reject","outbound": "block" },
+      { "rule_set": "sb_select","outbound": "GLOBAL" },
       { "rule_set": "sb_gemini","outbound": "🚀 Gemini" },
       { "rule_set": "sb_openai","outbound": "🤖 OpenAI" },
-      { "rule_set": "sb_select","outbound": "GLOBAL" },
       { "rule_set": "sb_proxy","outbound": "🚀 节点选择" },
-      { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
-      { "rule_set": "geolocation-!cn", "outbound": "🚀 节点选择" },
-      { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" }
+      { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" },
+      { "rule_set": "geolocation-!cn", "outbound": "🚀 节点选择" }
     ],
 	"auto_detect_interface": true,
 	"final": "GLOBAL"
