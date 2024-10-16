@@ -108,22 +108,14 @@
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "protocol": "quic", "outbound": "block" },
-      { "rule_set": "category-ads","outbound": "block" },
-      { "rule_set": "sb_reject","outbound": "block" },
-      { "rule_set": "geo_baidu","outbound": "block" },
-      { "rule_set": "geo_csdn","outbound": "block" },
-      { "rule_set": "geo_zhihu","outbound": "block" },
+      { "rule_set": ["sb_reject","category-ads","geo_baidu","geo_baidu","geo_csdn","geo_zhihu"],"outbound": "block" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
       { "rule_set": "sb_gemini","outbound": "🚀 Gemini" },
       { "rule_set": "sb_openai","outbound": "🤖 OpenAI" },
       { "rule_set": "sb_select","outbound": "🐸 临时选择" },
-      { "rule_set": "sb_proxy","outbound": "🚀 节点选择" },
-      { "rule_set": "geo_cloudflare","outbound": "🚀 节点选择" },
-      { "rule_set": "geolocation-!cn", "outbound": "🚀 节点选择" },
+      { "rule_set": ["sb_proxy","geo_cloudflare","geolocation-!cn"],"outbound": "🚀 节点选择" },
       { "ip_is_private": true, "outbound": "direct" },
-      { "rule_set": "sb_direct","outbound": "direct" },
-      { "rule_set": "sb_cn_list","outbound": "direct" },
-      { "rule_set": ["geo_amap", "geo_alibaba", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "outbound": "direct" }
+      { "rule_set": ["sb_direct", "sb_cn_list", "geo_amap", "geo_alibaba", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "outbound": "direct" }
     ],
 	"auto_detect_interface": true,
 	"final": "GLOBAL"
@@ -148,7 +140,7 @@
       {"clash_mode": "direct","server": "local-dns"},
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
       {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
-      {"rule_set": "sb_cn_list", "client_subnet": "1.0.1.0", "server": "remote-dns" }
+      {"rule_set": ["sb_cn_list", "geo_amap", "geo_alibaba", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "server": "local-dns" }
     ],
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"},
     "final": "remote-dns",
