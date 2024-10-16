@@ -3,17 +3,16 @@
   "rules": [
     {
       "domain_keyword": [
-        "ip"
+        "cloudflare"
       ]
     },
     {
       "domain_suffix": [
-        "upyun.com",
+        "browserleaks.com",
         "vv.video.qq.com",
         "ip125.com",
         "ipip.net",
-        "itdog.cn",
-        "browserleaks.com"
+        "itdog.cn"
       ]
     }
   ]

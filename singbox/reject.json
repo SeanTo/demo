@@ -5,7 +5,8 @@
       "domain_keyword": [
         "update.microsoft",
         "updates.microsoft",
-        "windowsupdate"
+        "windowsupdate",
+        "douyin.com"
       ]
     },
     {
@@ -17,11 +18,7 @@
         "edge.microsoft.com",
         "genuine.microsoft.com",
         "edgeupdates.microsoft.com",
-        "config.edge.skype.com",
-        "douyin.com",
-        "csdn.net",
-        "zhihu.com",
-        "baidu.com"
+        "config.edge.skype.com"
       ]
     }
   ]
