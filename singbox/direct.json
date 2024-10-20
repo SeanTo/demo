@@ -8,6 +8,12 @@
         "yacd.haishan.me",
         "d.metacubex.one"
       ]
+    },
+    {
+        "domain_suffix": [
+          "unpkg.com",
+          "lencr.org"
+        ]
     }
   ]
 }

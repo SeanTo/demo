@@ -99,9 +99,10 @@
       { "protocol": "quic", "outbound": "block" },
       { "rule_set": ["sb_reject","category-ads","geo_baidu","geo_csdn","geo_zhihu"],"outbound": "block" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
-      { "rule_set": ["sb_proxy","geo_cloudflare","geolocation-!cn","sb_select"],"outbound": "🚀 节点选择" },
+      { "rule_set": "sb_direct","outbound": "direct" },
+      { "rule_set": ["sb_proxy","sb_select","geolocation-!cn"],"outbound": "🚀 节点选择" },
       { "ip_is_private": true, "outbound": "direct" },
-      { "rule_set": ["sb_direct", "sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "outbound": "direct" }
+      { "rule_set": ["sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "outbound": "direct" }
     ],
 	"auto_detect_interface": true,
 	"final": "GLOBAL"
