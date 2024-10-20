@@ -1,6 +1,7 @@
 {
   "version": 1,
   "rules": [
+    {
       "domain_suffix": [
         "gov.cn",
         "gps666.net"
