@@ -96,7 +96,9 @@
       { "tag": "geo_douban","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/douban.json","download_detour": "direct" },
       { "tag": "geo_iqiyi","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/iqiyi.json","download_detour": "direct" },
       { "tag": "geo_jd","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/jd.json","download_detour": "direct" },
+      { "tag": "geo_netease","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netease.json","download_detour": "direct" },
       { "tag": "geo_sina","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/sina.json","download_detour": "direct" },
+      { "tag": "geo_sohu","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/sohu.json","download_detour": "direct" },
       { "tag": "geo_taboola","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/taboola.json","download_detour": "direct" },
       { "tag": "geo_tencent","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tencent.json","download_detour": "direct" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "direct" },
@@ -115,7 +117,7 @@
       { "rule_set": "sb_openai","outbound": "🤖 OpenAI" },
       { "rule_set": "sb_select","outbound": "🐸 临时选择" },
       { "rule_set": ["sb_proxy"],"outbound": "🚀 节点选择" },
-      { "rule_set": ["sb_select", "geo_bing","sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "outbound": "direct" }
+      { "rule_set": ["sb_select", "geo_bing","sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_taboola", "geo_tencent"], "outbound": "direct" }
     ],
 	"auto_detect_interface": true,
 	"final": "GLOBAL"
@@ -140,7 +142,7 @@
       {"clash_mode": "direct","server": "local-dns"},
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
       {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
-      {"rule_set": ["sb_direct", "sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_sina", "geo_taboola", "geo_tencent"], "client_subnet": "1.0.1.0", "server": "local-dns" }
+      {"rule_set": ["sb_direct", "sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_bing", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_taboola", "geo_tencent"], "client_subnet": "1.0.1.0", "server": "local-dns" }
     ],
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"},
     "final": "remote-dns",

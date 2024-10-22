@@ -11,6 +11,9 @@
     },
     {
         "domain_suffix": [
+          "msn.cn",
+          "live.com",
+          "hotmail.com",
           "unpkg.com",
           "lencr.org"
         ]
