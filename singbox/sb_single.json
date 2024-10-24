@@ -67,15 +67,15 @@
       { "tag": "sb_reject","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject.json","download_detour": "direct" },
       { "tag": "sb_direct","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/direct.json","download_detour": "direct" },
       { "tag": "sb_cn_list","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/cn_list.json","download_detour": "direct" },
-	  { "tag": "sb_proxy","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
-	  { "tag": "sb_select","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/select.json","download_detour": "direct" },
-	  { "tag": "category-ads","type": "remote","format": "binary","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "direct" },
+      { "tag": "sb_proxy","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
+      { "tag": "sb_select","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/select.json","download_detour": "direct" },
+      { "tag": "category-ads","type": "remote","format": "binary","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs","download_detour": "direct" },
       { "tag": "geo_baidu","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/baidu.json","download_detour": "direct" },
       { "tag": "geo_csdn","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/csdn.json","download_detour": "direct" },
       { "tag": "geo_zhihu","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/zhihu.json","download_detour": "direct" },
       { "tag": "sb_gemini", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google-gemini.json", "download_detour": "direct" },
       { "tag": "sb_openai", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.json", "download_detour": "direct" },
-	  { "tag": "geo_cloudflare","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cloudflare.json","download_detour": "direct" },
+      { "tag": "geo_cloudflare","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cloudflare.json","download_detour": "direct" },
       { "tag": "geo_amap","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/amap.json","download_detour": "direct" },
       { "tag": "geo_alibaba","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/alibaba.json","download_detour": "direct" },
       { "tag": "geo_bilibili","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.json","download_detour": "direct" },
@@ -105,8 +105,8 @@
       { "rule_set": ["sb_proxy"],"outbound": "🚀 节点选择" },
       { "rule_set": ["sb_select", "geo_bing","sb_cn_list", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_taboola", "geo_tencent"], "outbound": "direct" }
     ],
-	"auto_detect_interface": true,
-	"final": "GLOBAL"
+    "auto_detect_interface": true,
+    "final": "GLOBAL"
   },
 
   "dns": {
@@ -123,6 +123,7 @@
     "independent_cache": false,
     "client_subnet": "1.0.1.0",
     "rules": [
+      {"rule_set": ["sb_reject","CATEGORY-ADS","baidu","csdn","zhihu"], "server":"block"},
       {"outbound": "any","disable_cache": true,"server": "local-dns"},
       {"type": "logical", "mode": "and", "rules": [ { "domain_suffix": [ ".lan", ".localdomain", ".example", ".invalid", ".localhost", ".test", ".local", ".home.arpa", ".msftconnecttest.com", ".msftncsi.com" ], "invert": true }, { "query_type": [ "A", "AAAA"]} ], "server": "fakeip-dns" },
       {"clash_mode": "direct","server": "local-dns"},
