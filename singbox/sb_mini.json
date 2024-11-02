@@ -103,7 +103,6 @@
       { "protocol": "dns", "port": 53, "outbound": "dns-out" },
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
-      { "protocol": "quic", "outbound": "block" },
       { "rule_set": ["sb_reject","category-ads","geo_baidu","geo_csdn","geo_zhihu"],"outbound": "block" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
       { "rule_set": "sb_gemini","outbound": "🚀 Gemini" },
