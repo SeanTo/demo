@@ -10,15 +10,15 @@
       ]
     },
     {
-        "domain_suffix": [
-          "msn.cn",
-          "live.com",
-          "hotmail.com",
-          "unpkg.com",
-          "lencr.org",
-          "163.net",
-          "time.windows.com"
-        ]
+      "domain_suffix": [
+        "msn.cn",
+        "live.com",
+        "hotmail.com",
+        "unpkg.com",
+        "lencr.org",
+        "163.net",
+        "time.windows.com"
+      ]
     }
   ]
 }
