@@ -54,7 +54,7 @@
   ],
 
   "outbounds": [
-    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["{all}", "block"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护"] }] },
+    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["{all}", "block"], "filter": [{ "action": "exclude", "keywords": ["IPV6|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护"] }] },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["🚀 节点选择", "block", "direct"] },
     { "type": "direct", "tag": "direct" },
     { "type": "block", "tag": "block" },
@@ -132,6 +132,6 @@
     ],
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"},
     "final": "remote-dns",
-    "strategy": "prefer_ipv4"
+    "strategy": "only_ipv4"
   }
 }
