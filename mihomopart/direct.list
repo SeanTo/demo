@@ -6,9 +6,9 @@ DOMAIN,yacd.haishan.me
 DOMAIN,d.metacubex.one
 
 # 国内网站
-DOMAIN-SUFFIX,gov.cn"
-DOMAIN-SUFFIX,gps666.net"
-DOMAIN-SUFFIX,cnblogs.com"
+DOMAIN-SUFFIX,gov.cn
+DOMAIN-SUFFIX,gps666.net
+DOMAIN-SUFFIX,cnblogs.com
 
 # alibaba
 DOMAIN-SUFFIX,alibaba
