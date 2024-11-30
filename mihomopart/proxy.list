@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,upaiyun.com
 # 国外
 
 DOMAIN-KEYWORD,cloudflare
+DOMAIN-KEYWORD,copilot
 
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,vercel.app
-DOMAIN-SUFFIX,copilot.microsoft.com
