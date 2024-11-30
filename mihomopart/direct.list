@@ -8,7 +8,7 @@ DOMAIN,d.metacubex.one
 # 国内网站
 DOMAIN-SUFFIX,gov.cn"
 DOMAIN-SUFFIX,gps666.net"
-DOMAIN-SUFFIX,cnblog.com"
+DOMAIN-SUFFIX,cnblogs.com"
 
 # alibaba
 DOMAIN-SUFFIX,alibaba
