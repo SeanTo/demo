@@ -10,6 +10,9 @@ DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,gps666.net
 DOMAIN-SUFFIX,cnblogs.com
 
+# 国外网站
+DOMAIN-SUFFIX,xboxlive.com
+
 # alibaba
 DOMAIN-SUFFIX,alibaba
 DOMAIN-SUFFIX,alipay
