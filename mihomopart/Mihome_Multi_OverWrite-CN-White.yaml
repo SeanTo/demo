@@ -95,7 +95,7 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver-policy:
-    "rule-set:private_domain":
+    "rule-set:private_domain,mi_direct":
     - 223.5.5.5
     - 119.29.29.29
     "rule-set:geolocation-!cn":
@@ -103,34 +103,36 @@ dns:
       - "https://dns.google/dns-query"
  
 # 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 香港故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, ♻️ 其它测速, REJECT, DIRECT]}
+pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 美国故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, REJECT, DIRECT]}
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [🔯 香港故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, ♻️ 其它测速]}
-  - {name: 🚀 Gemini, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, ♻️ 其它测速, ♻️ 自动测速]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, ♻️ 其它测速, ♻️ 自动测速]}
+  - {name: 🚀 节点选择, type: select, proxies: [🔯 美国故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点]}
+  - {name: 🚀 Gemini, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, ♻️ 自动测速]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, ♻️ 自动测速]}
+  - {name: 🚀 其它节点, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|美|US|🇺🇸|台|TW|🇹🇼|日|JP|🇯🇵|韩|KR|🇰🇷|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
   - {name: GLOBAL,!!merge <<: *pr}
-  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$"}
-  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护|🇯🇵|JP|🇰🇷|KR)).)*$"}
-  - {name: 非 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护|🇯🇵|JP|🇰🇷|KR)).)*$"}
-  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(港|HK|🇭🇰|(?i)Hong))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$"}
-  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(美|US|🇺🇸|(?i)States|America))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$"}
-  - {name: 🇹🇼 台湾测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(台|TW|🇹🇼|(?i)Tai))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$" }
-  - {name: 🇯🇵 日本测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(日|JP|🇯🇵|(?i)Janp))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$" }
-  - {name: 🇰🇷 韩国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(韩|KR|🇰🇷|(?i)Korea))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$" }
-  - {name: ♻️ 其它测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|美|US|🇺🇸|台|TW|🇹🇼|日|JP|🇯🇵|韩|KR|🇰🇷|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护)).)*$"}
+  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(美|US|🇺🇸|(?i)States|America))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
+  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇯🇵|JP|🇰🇷|KR)).)*$"}
+  - {name: 非 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇯🇵|JP|🇰🇷|KR)).)*$"}
+  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(港|HK|🇭🇰|(?i)Hong))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
+  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(美|US|🇺🇸|(?i)States|America))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
+  - {name: 🇹🇼 台湾测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(台|TW|🇹🇼|(?i)Tai))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$" }
+  - {name: 🇯🇵 日本测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(日|JP|🇯🇵|(?i)Janp))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$" }
+  - {name: 🇰🇷 韩国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(韩|KR|🇰🇷|(?i)Korea))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$" }
+  - {name: 🇸🇬 狮城测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(新加坡|SG|🇸🇬))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$" }
+  - {name: ♻️ 其它测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|美|US|🇺🇸|台|TW|🇹🇼|日|JP|🇯🇵|韩|KR|🇰🇷|新加坡|SG|🇸🇬|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
 rules:
-  - RULE-SET,private_domain,DIRECT
-  - RULE-SET,mi_reject,REJECT
-  - RULE-SET,mi_proxy,🚀 节点选择
-  - RULE-SET,mi_direct,DIRECT
-  - RULE-SET,ChinaMedia,DIRECT
-  - RULE-SET,Microsoft,DIRECT
-  - RULE-SET,OneDrive,DIRECT
-  - RULE-SET,gemini,🚀 Gemini
-  - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,geolocation-!cn,🚀 节点选择
-  - MATCH,GLOBAL
+  - RULE-SET, private_domain, DIRECT
+  - RULE-SET, mi_reject, REJECT
+  - RULE-SET, mi_proxy, 🚀 节点选择
+  - RULE-SET, mi_direct, DIRECT
+  - RULE-SET, ChinaMedia, DIRECT
+  - RULE-SET, Microsoft, DIRECT
+  - RULE-SET, OneDrive, DIRECT
+  - RULE-SET, gemini, 🚀 Gemini
+  - RULE-SET, ai, 🤖 ChatGPT
+  - RULE-SET, geolocation-!cn, 🚀 节点选择
+  - MATCH, GLOBAL
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
