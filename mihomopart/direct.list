@@ -1,9 +1,9 @@
 
 # 直连
-DOMAIN,clash.razord.top
-DOMAIN,yacd.metacubex.one
-DOMAIN,yacd.haishan.me
-DOMAIN,d.metacubex.one
+DOMAIN-SUFFIX,clash.razord.top
+DOMAIN-SUFFIX,yacd.metacubex.one
+DOMAIN-SUFFIX,yacd.haishan.me
+DOMAIN-SUFFIX,d.metacubex.one
 
 # 国内
 DOMAIN-SUFFIX,gov.cn
@@ -826,8 +826,7 @@ DOMAIN-SUFFIX,sohu.com
 DOMAIN-SUFFIX,sohucs.com
 
 # tencent
-DOMAIN,wetv.qq.com
-
+DOMAIN-SUFFIX,wetv.qq.com
 DOMAIN-SUFFIX,qcloudmarket.com
 DOMAIN-SUFFIX,spcloudhw.com
 DOMAIN-SUFFIX,apcdns.net

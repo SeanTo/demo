@@ -60,7 +60,7 @@ sniffer:
 tun:
   enable: true
   stack: mixed
-  mtu: 9000
+  mtu: 1492
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
@@ -103,12 +103,12 @@ dns:
       - "https://dns.google/dns-query"
  
 # 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 美国故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, REJECT, DIRECT]}
+pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🔯 美国故转, 🚀 其它节点, REJECT, DIRECT]}
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [🔯 美国故转, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点]}
-  - {name: 🚀 Gemini, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, ♻️ 自动测速]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🚀 其它节点, ♻️ 自动测速]}
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🔯 美国故转, 🚀 其它节点]}
+  - {name: 🚀 Gemini, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🔯 美国故转, 🚀 其它节点, ♻️ 自动测速]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, ♻️ 其它测速, 🔯 美国故转, 🚀 其它节点, ♻️ 自动测速]}
   - {name: 🚀 其它节点, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(港|HK|🇭🇰|美|US|🇺🇸|台|TW|🇹🇼|日|JP|🇯🇵|韩|KR|🇰🇷|关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
   - {name: GLOBAL,!!merge <<: *pr}
   - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "(?=.*(美|US|🇺🇸|(?i)States|America))^((?!(关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
