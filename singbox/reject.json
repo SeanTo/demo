@@ -2,23 +2,9 @@
   "version": 1,
   "rules": [
     {
-      "domain_keyword": [
-        "update.microsoft",
-        "updates.microsoft",
-        "windowsupdate",
-        "douyin.com"
-      ]
-    },
-    {
       "domain_suffix": [
-        "dl.delivery.mp.microsoft.com",
-        "prod.do.dsp.mp.microsoft.com",
-        "msedge.api.cdp.microsoft.com",
-        "msedge.f.tlu.dl.delivery.mp.microsoft.com",
-        "edge.microsoft.com",
-        "genuine.microsoft.com",
-        "edgeupdates.microsoft.com",
-        "config.edge.skype.com"
+        "baidu.com",
+        "douyin.com"
       ]
     }
   ]

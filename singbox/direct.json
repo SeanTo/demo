@@ -1,24 +1,20 @@
 {
   "version": 1,
   "rules": [
-    {
-      "domain": [
-        "clash.razord.top",
-        "yacd.metacubex.one",
-        "yacd.haishan.me",
-        "d.metacubex.one"
-      ]
-    },
-    {
-      "domain_suffix": [
-        "msn.cn",
-        "live.com",
-        "hotmail.com",
-        "unpkg.com",
-        "lencr.org",
-        "163.net",
-        "time.windows.com"
-      ]
-    }
+	{
+	  "domain_suffix": [
+		"clash.razord.top",
+		"yacd.metacubex.one",
+		"yacd.haishan.me",
+		"d.metacubex.one",
+		
+		"gov.cn",
+		"gps666.net",
+		"cnblogs.com",
+        "youku.com",
+		
+		"asus.com"
+	  ]
+	}
   ]
 }
