@@ -6,14 +6,14 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 ipv6: false
-allow-lan: true
+allow-lan: false
 unified-delay: true
 tcp-concurrent: true
   
 geodata-mode: false
 geodata-loader: standard
 geo-auto-update: true
-geo-update-interval: 48
+geo-update-interval: 24
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -34,7 +34,7 @@ keep-alive-interval: 30
 
 # 策略组选择和fakeip缓存
 profile:
-  store-selected: true
+  store-selected: false
   store-fake-ip: true
   
 # 流量嗅探
@@ -83,6 +83,7 @@ dns:
   fake-ip-filter:
     - "+.lan"
     - "+.local"
+    - "*.msftconnecttest.com"
     - geosite:private
     - geosite:cn
   default-nameserver:
@@ -104,7 +105,7 @@ dns:
  
 # 锚点
 pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, 🚀 其它节点, 🔯 香港故转, 🔯 美国故转, REJECT, DIRECT]}
-pr2: &pr2 {type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, 🚀 其它节点, 🔯 香港故转, 🔯 美国故转, ♻️ 自动测速]}
+pr2: &pr2 {type: select, proxies: [非 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, 🚀 其它节点, 🔯 香港故转, 🔯 美国故转, ♻️ 自动测速, 🚀 节点选择]}
 # 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, 非 香港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, 🇯🇵 日本测速, 🇰🇷 韩国测速, 🇸🇬 狮城测速, 🔯 香港故转, 🔯 美国故转, 🚀 其它节点]}
@@ -112,8 +113,8 @@ proxy-groups:
   - {name: 🤖 OpenAI,!!merge <<: *pr2}
   - {name: 🚀 其它节点, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇭🇰|HK|香港|🇺🇸|US|美国|🇹🇼|TW|台湾|🇯🇵|JP|日本|🇰🇷|KR|韩国|🇸🇬|SG|新加坡)).*$"}
   - {name: GLOBAL,!!merge <<: *pr}
-  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇯🇵|JP|🇰🇷|KR)).)*$"}
-  - {name: 非 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇭🇰|HK|香港|🇯🇵|JP|日本|🇰🇷|KR|韩国)).*$"}
+  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).)*$"}
+  - {name: 非 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇭🇰|HK|香港)).*$"}
   - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).*(🇭🇰|HK|香港|(?i)Hongkong).*$"}
   - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).*(🇺🇸|US|美国|(?i)States|America).*$"}
   - {name: 🇹🇼 台湾测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).*(🇹🇼|TW|台湾|(?i)Taiwan).*$" }
@@ -124,12 +125,15 @@ proxy-groups:
   - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*(关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6)).*(🇺🇸|US|美国|(?i)States|America).*$"}
 rules:
   - RULE-SET, private_domain, DIRECT
-  - RULE-SET, proxylite, 🚀 节点选择
+  - RULE-SET, mi_reject, REJECT
+  - RULE-SET, mi_proxy, 🚀 节点选择
+  - RULE-SET, mi_direct, DIRECT
   - RULE-SET, gemini, 🚀 Gemini
-  - RULE-SET, ai, 🤖 ChatGPT
+  - RULE-SET, ai, 🤖 OpenAI
+  - RULE-SET, proxylite, 🚀 节点选择
   - RULE-SET, geolocation-!cn, 🚀 节点选择
   - RULE-SET, cn_domain, DIRECT
-  - RULE-SET, cn_ip, DIRECT
+  - RULE-SET, cn_ip, DIRECT, no-resolve
   - MATCH, GLOBAL
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
@@ -138,6 +142,9 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   private_domain: {!!merge <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  mi_reject: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/reject.list"}
+  mi_proxy: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/proxy.list"}
+  mi_direct: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/direct.list"}
   proxylite: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
   gemini: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/gemini.list"}
   ai: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
