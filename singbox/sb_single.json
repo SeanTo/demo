@@ -54,11 +54,10 @@
   ],
 
   "outbounds": [
-    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🎈 自动测速", "{all}", "block"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护"] }] },
-    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🎈 自动测速", "🚀 全部节点", "block"] },
+    { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["♻️ 自动测速", "{all}", "block"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|维护"] }] },
     { "tag": "🚀 全部节点", "type": "selector", "outbounds": ["{all}", "block"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6"] }] },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["🚀 节点选择", "🚀 全部节点", "block", "direct"] },
-    { "tag": "🎈 自动测速", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|维护"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
+    { "tag": "♻️ 自动测速", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["关注|加入|网站|地址|剩余|套餐|过期|时间|有效|无效|失效|维护"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
     { "type": "direct", "tag": "direct" },
     { "type": "block", "tag": "block" },
     { "tag": "dns-out", "type": "dns" }
