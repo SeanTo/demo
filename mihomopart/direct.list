@@ -5,14 +5,27 @@ DOMAIN-SUFFIX,yacd.metacubex.one
 DOMAIN-SUFFIX,yacd.haishan.me
 DOMAIN-SUFFIX,d.metacubex.one
 
-# 国内
-DOMAIN-SUFFIX,gov.cn
-DOMAIN-SUFFIX,gps666.net
-DOMAIN-SUFFIX,cnblogs.com
-
 # 国外
 DOMAIN-SUFFIX,asus.com
 DOMAIN-SUFFIX,asus.com.cn
+
+# 国内
+DOMAIN-SUFFIX,cnblogs.com
+DOMAIN-SUFFIX,gps666.net
+DOMAIN-SUFFIX,gov.cn
+DOMAIN-SUFFIX,iqiyi.com
+
+# alibaba
+# Amap
+# CCTV
+# didi
+# douban
+# jd
+# netease
+# sina
+# sohu
+# tencent
+
 
 # alibaba
 DOMAIN-SUFFIX,alibaba
