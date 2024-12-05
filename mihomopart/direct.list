@@ -13,7 +13,7 @@ DOMAIN-SUFFIX,asus.com.cn
 DOMAIN-SUFFIX,cnblogs.com
 DOMAIN-SUFFIX,gps666.net
 DOMAIN-SUFFIX,gov.cn
-DOMAIN-SUFFIX,iqiyi.com
+DOMAIN-KEYWOED,iqiyi
 
 # alibaba
 # Amap
