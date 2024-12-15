@@ -1,20 +1,18 @@
 {
   "version": 1,
   "rules": [
-	{
-	  "domain_suffix": [
-		"clash.razord.top",
-		"yacd.metacubex.one",
-		"yacd.haishan.me",
-		"d.metacubex.one",
-		
-		"gov.cn",
-		"gps666.net",
-		"cnblogs.com",
+    {
+      "domain_suffix": [
+        "clash.razord.top",
+        "yacd.metacubex.one",
+        "yacd.haishan.me",
+        "d.metacubex.one",
+        "gov.cn",
+        "gps666.net",
+        "cnblogs.com",
         "youku.com",
-		
-		"asus.com"
-	  ]
-	}
+        "asus.com"
+      ]
+    }
   ]
 }
