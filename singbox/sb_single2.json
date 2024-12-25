@@ -65,7 +65,7 @@
 
   "route": {
     "rule_set": [
-      { "tag": "sb_reject","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject2.json","download_detour": "direct" },
+      { "tag": "sb_reject","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject.json","download_detour": "direct" },
       { "tag": "sb_proxy","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
       { "tag": "sb_direct","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/direct.json","download_detour": "direct" },
       { "tag": "geo_amap","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/amap.json","download_detour": "direct" },
