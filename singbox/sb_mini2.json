@@ -3,19 +3,20 @@
     "level": "warn",
     "timestamp": true
   },
+  
   "experimental": {
-    "clash_api": {
-      "external_controller": "127.0.0.1:20123",
-      "external_ui": "ui",
-      "secret": "",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "direct",
-      "default_mode": "rule"
-    },
     "cache_file": {
       "enabled": true,
       "store_fakeip": false,
       "store_rdrc": false
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:20123",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "rule"
     }
   },
 
@@ -24,12 +25,12 @@
       "type": "mixed",
       "listen": "127.0.0.1",
       "listen_port": 20122,
-      "sniff": true,
-      "sniff_override_destination": true,
-      "domain_strategy": "ipv4_only",
       "tcp_fast_open": true,
       "tcp_multi_path": false,
-      "udp_fragment": true
+      "udp_fragment": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
     },
     {
       "type": "tun",
@@ -71,43 +72,31 @@
   ],
 
   "route": {
-    "rule_set": [
-      { "tag": "sb_reject","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject2.json","download_detour": "direct" },
-      { "tag": "sb_proxy","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
-      { "tag": "sb_direct","type": "remote","format": "source","url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/main/singbox/direct.json","download_detour": "direct" },
-      { "tag": "sb_gemini", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google-gemini.json", "download_detour": "direct" },
-      { "tag": "sb_openai", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.json", "download_detour": "direct" },
-      { "tag": "geo_amap","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/amap.json","download_detour": "direct" },
-      { "tag": "geo_alibaba","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/alibaba.json","download_detour": "direct" },
-      { "tag": "geo_bilibili","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.json","download_detour": "direct" },
-      { "tag": "geo_cctv","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cctv.json","download_detour": "direct" },
-      { "tag": "geo_didi","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/didi.json","download_detour": "direct" },
-      { "tag": "geo_douban","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/douban.json","download_detour": "direct" },
-      { "tag": "geo_iqiyi","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/iqiyi.json","download_detour": "direct" },
-      { "tag": "geo_jd","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/jd.json","download_detour": "direct" },
-      { "tag": "geo_netease","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netease.json","download_detour": "direct" },
-      { "tag": "geo_sina","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/sina.json","download_detour": "direct" },
-      { "tag": "geo_sohu","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/sohu.json","download_detour": "direct" },
-      { "tag": "geo_tencent","type": "remote","format": "source","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tencent.json","download_detour": "direct" },
-      { "tag": "geolocation-!cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "direct" },
-      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "direct" },
-      { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "direct" }
-    ],
     "rules": [
       { "protocol": "dns", "port": 53, "outbound": "dns-out" },
+      { "ip_is_private": true, "outbound": "direct" },
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
-      { "ip_is_private": true, "outbound": "direct" },
       { "rule_set": ["sb_reject"],"outbound": "block" },
       { "network": "udp","port": 443,"outbound": "🚀 节点选择" },
       { "rule_set": "sb_gemini","outbound": "🚀 Gemini" },
       { "rule_set": "sb_openai","outbound": "🤖 OpenAI" },
       { "rule_set": ["sb_proxy"], "outbound": "🚀 节点选择" },
-      { "rule_set": ["sb_direct", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_tencent"], "outbound": "direct" },
-      { "rule_set": ["geolocation-!cn"], "outbound": "🚀 节点选择" }
+      { "rule_set": ["geolocation-!cn"], "outbound": "🚀 节点选择" },
+      { "rule_set": ["geosite-cn", "geoip-cn"], "outbound": "direct" }
     ],
-    "auto_detect_interface": true,
-    "final": "GLOBAL"
+    "rule_set": [
+      { "tag": "sb_reject","type": "remote","format": "source","url": "https://raw.githubusercontent.com/SeanTo/demo/main/singbox/reject2.json","download_detour": "direct" },
+      { "tag": "sb_proxy","type": "remote","format": "source","url": "https://raw.githubusercontent.com/SeanTo/demo/main/singbox/proxy.json","download_detour": "direct" },
+      { "tag": "sb_direct","type": "remote","format": "source","url": "https://raw.githubusercontent.com/SeanTo/demo/main/singbox/direct.json","download_detour": "direct" },
+      { "tag": "sb_gemini", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google-gemini.json", "download_detour": "direct" },
+      { "tag": "sb_openai", "type": "remote", "format": "source", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.json", "download_detour": "direct" },
+      { "tag": "geolocation-!cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "direct" },
+      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "direct" },
+      { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "direct" }
+    ],
+    "final": "direct",
+    "auto_detect_interface": true
   },
 
   "dns": {
@@ -119,10 +108,6 @@
       {"tag": "fakeip-dns", "address": "fakeip"},
       {"tag": "block","address": "rcode://success"}
     ],
-    "disable_cache": false,
-    "disable_expire": false,
-    "independent_cache": false,
-    "client_subnet": "1.0.1.0",
     "rules": [
       {"outbound": "any","disable_cache": true,"server": "local-dns"},
       {"type": "logical", "mode": "and", "rules": [ { "domain_suffix": [ ".lan", ".localdomain", ".example", ".invalid", ".localhost", ".test", ".local", ".home.arpa", ".msftconnecttest.com", ".msftncsi.com" ], "invert": true }, { "query_type": [ "A", "AAAA"]} ], "server": "fakeip-dns" },
@@ -130,10 +115,15 @@
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
       {"rule_set": ["sb_reject"], "server":"block"},
       {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
-      {"rule_set": ["sb_direct", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_tencent"], "client_subnet": "1.0.1.0", "server": "local-dns" }
+      {"rule_set": "geolocation-!cn", "client_subnet": "1.0.1.0", "server": "remote-dns" },
+      {"rule_set": ["geosite-cn"], "server":"local-dns"}
     ],
-    "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"},
-    "final": "remote-dns",
-    "strategy": "ipv4_only"
+    "final": "local-dns",
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "client_subnet": "1.0.1.0",
+    "fakeip": {"enabled": true, "inet4_range": "198.18.0.1/16", "inet6_range": "fc00::/18"}
   }
 }
