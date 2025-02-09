@@ -144,14 +144,14 @@ rule-anchor:
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  private_domain: {!!merge <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  mi_reject: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/reject.list"}
-  mi_proxy: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/proxy.list"}
-  mi_direct: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/direct.list"}
-  proxylite: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
-  gemini: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/gemini.list"}
-  ai: {!!merge <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
-  geolocation-!cn: {!!merge <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
-  cn_domain: {!!merge <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
+  private_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  mi_reject: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/reject.list"}
+  mi_proxy: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/proxy.list"}
+  mi_direct: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/direct.list"}
+  proxylite: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
+  gemini: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/gemini.list"}
+  ai: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
+  geolocation-!cn: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
+  cn_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
   
   cn_ip: {!!merge <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
