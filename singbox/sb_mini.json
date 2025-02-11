@@ -124,7 +124,7 @@
       {"type": "logical", "mode": "and", "rules": [ { "domain_suffix": [ ".lan", ".localdomain", ".example", ".invalid", ".localhost", ".test", ".local", ".home.arpa", ".msftconnecttest.com", ".msftncsi.com" ], "invert": true }, { "query_type": [ "A", "AAAA"]} ], "server": "fakeip-dns" },
       {"clash_mode": "direct","server": "local-dns"},
       {"clash_mode": "global","client_subnet": "1.0.1.0","server": "remote-dns"},
-      {"rule_set": ["sb_reject"], "server":"BLOCK"},
+      {"rule_set": ["sb_reject"], "server":"block"},
       {"rule_set": "sb_proxy", "client_subnet": "1.0.1.0", "server": "remote-dns" },
       {"rule_set": ["sb_direct", "geo_amap", "geo_alibaba", "geo_bilibili", "geo_cctv", "geo_didi", "geo_douban", "geo_iqiyi", "geo_jd", "geo_netease", "geo_sina", "geo_sohu", "geo_tencent"], "client_subnet": "1.0.1.0", "server": "local-dns" }
     ],
