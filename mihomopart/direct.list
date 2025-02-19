@@ -10,12 +10,13 @@ DOMAIN-SUFFIX,asus.com
 DOMAIN-SUFFIX,asus.com.cn
 
 # 国内
+DOMAIN-KEYWORD,iqiyi
 DOMAIN-SUFFIX,cnblogs.com
 DOMAIN-SUFFIX,gps666.net
 DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,tianyancha.com
 DOMAIN-SUFFIX,deepseek.com
-DOMAIN-KEYWORD,iqiyi
+DOMAIN-SUFFIX,fittenlab.cn
 
 # Google China
 DOMAIN-SUFFIX,265.com
