@@ -16,4 +16,10 @@ DOMAIN-SUFFIX, aistudio.google.com
 DOMAIN-SUFFIX, bard.google.com
 DOMAIN-SUFFIX, gemini.google.com
 
+# copilot
+
+DOMAIN-SUFFIX, githubcopilot.com
+DOMAIN-SUFFIX, copilot.microsoft.com
+DOMAIN-SUFFIX, copilot-telemetry.githubusercontent.com
+
 DOMAIN-KEYWORD, copilot
