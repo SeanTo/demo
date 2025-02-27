@@ -89,18 +89,15 @@ dns:
     - geosite:private
     - geosite:cn
   default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+      - 1.1.1.1
   proxy-server-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+      - "https://dns.cloudflare.com/dns-query"
+      - "https://dns.google/dns-query"
   nameserver-policy:
     "rule-set:private_domain,ChinaMedia,mi_direct":
     - 223.5.5.5
-    - 119.29.29.29
     "rule-set:geolocation-!cn":
       - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"

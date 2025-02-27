@@ -1,10 +1,8 @@
-
 # Google Gemini
 
 DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,alkalicore-pa.clients6.google.com
 DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
-
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,generativeai.google
@@ -24,6 +22,9 @@ DOMAIN-SUFFIX,copilot.github.com
 DOMAIN-SUFFIX,copilot.github.io
 DOMAIN-SUFFIX,copilot.github.content.com
 DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com
+DOMAIN-SUFFIX,copilot-content.azureedge.net
+DOMAIN-SUFFIX,copilot-content.vsassets.io
+DOMAIN-SUFFIX,copilot-content.vssps.visualstudio.com
+DOMAIN-SUFFIX,copilot-content.gallerycdn.vsassets.io
 DOMAIN-SUFFIX,vscode-cdn.net
 DOMAIN-SUFFIX,vscode-sync.trafficmanager.net
-DOMAIN-SUFFIX,githubusercontent.com
