@@ -14,17 +14,14 @@ DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,gemini.google.com
 
+# 内容：Github Copilot
+# 数量：5条
+DOMAIN-KEYWORD,cocopilot
+DOMAIN,api.github.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.individual.githubcopilot.com
+
 # copilot
 
 DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,githubcopilot.com
-DOMAIN-SUFFIX,copilot.github.com
-DOMAIN-SUFFIX,copilot.github.io
-DOMAIN-SUFFIX,copilot.github.content.com
-DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com
-DOMAIN-SUFFIX,copilot-content.azureedge.net
-DOMAIN-SUFFIX,copilot-content.vsassets.io
-DOMAIN-SUFFIX,copilot-content.vssps.visualstudio.com
-DOMAIN-SUFFIX,copilot-content.gallerycdn.vsassets.io
-DOMAIN-SUFFIX,vscode-cdn.net
-DOMAIN-SUFFIX,vscode-sync.trafficmanager.net
