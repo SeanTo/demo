@@ -20,4 +20,10 @@ DOMAIN-SUFFIX,gemini.google.com
 
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,copilot.github.com
+DOMAIN-SUFFIX,copilot.github.io
+DOMAIN-SUFFIX,copilot.github.content.com
 DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com
+DOMAIN-SUFFIX,vscode-cdn.net
+DOMAIN-SUFFIX,vscode-sync.trafficmanager.net
+DOMAIN-SUFFIX,githubusercontent.com
