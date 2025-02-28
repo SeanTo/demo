@@ -103,30 +103,28 @@ dns:
       - "https://dns.google/dns-query"
  
 # 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速, REJECT, DIRECT]}
-pr2: &pr2 {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速]}
+pr: &pr {type: select, proxies: [🚀 节点选择, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, REJECT, DIRECT]}
+pr2: &pr2 {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速]}
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, 🇭🇰 香港测速, 🇺🇸 美国测速, 🇹🇼 台湾测速]}
-  - {name: 🚀 手动指定, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*$"}
-  - {name: 💬 Gemini,!!merge <<: *pr2}
-  - {name: 💬 OpenAI,!!merge <<: *pr2}
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, ♻️ 非港测速, 🚀 手动指定, 🔯 故障转移, 🔯 非港故转, 🇭🇰 香港测速, 🇺🇸 美国测速]}
+  - {name: 🚀 手动指定, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*$"}
+  - {name: 💬 AI,!!merge <<: *pr2}
   - {name: GLOBAL,!!merge <<: *pr}
-  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat)).*$"}
-  - {name: ♻️ 非港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
-  - {name: 🔯 故障转移, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat)).*$"}
-  - {name: 🔯 非港故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
-  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*(🇭🇰|HK|香港|(?i)Hongkong).*$"}
-  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*(🇺🇸|US|美国|(?i)States|America).*$"}
-  - {name: 🇹🇼 台湾测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*(🇹🇼|TW|台湾|(?i)Taiwan).*$" }
+  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|中国|俄罗斯|伊朗)).*$"}
+  - {name: ♻️ 非港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港|中国|俄罗斯|伊朗)).*$"}
+  - {name: 🔯 故障转移, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|中国|俄罗斯|伊朗)).*$"}
+  - {name: 🔯 非港故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港|中国|俄罗斯|伊朗)).*$"}
+  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*(🇭🇰|HK|香港|(?i)Hongkong).*$"}
+  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,4}|[2-9][0-9]|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|:|IPV6|CFnat)).*(🇺🇸|US|美国|(?i)States|America).*$"}
 rules:
   - RULE-SET, private_domain, DIRECT
   - RULE-SET, mi_reject, REJECT
   - RULE-SET, mi_proxy, 🚀 节点选择
   - RULE-SET, mi_direct, DIRECT
   - RULE-SET, ChinaMedia, DIRECT
-  - RULE-SET, gemini, 💬 Gemini
-  - RULE-SET, ai, 💬 OpenAI
+  - RULE-SET, gemini, 💬 AI
+  - RULE-SET, ai, 💬 AI
   - RULE-SET, geolocation-!cn, 🚀 节点选择
   - MATCH, GLOBAL
 rule-anchor:

@@ -39,3 +39,8 @@ DOMAIN-SUFFIX,copilot-content.azureedge.net
 DOMAIN-SUFFIX,copilot-content.vsassets.io
 DOMAIN-SUFFIX,copilot-content.vssps.visualstudio.com
 DOMAIN-SUFFIX,copilot-content.gallerycdn.vsassets.io
+
+# Claude
+
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
