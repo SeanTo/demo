@@ -106,7 +106,7 @@ dns:
       - "https://dns.google/dns-query"
  
 # 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🚀 手动指定, 🔯 非港故转, ♻️ 自动测速, ♻️ 非港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, REJECT, DIRECT]}
+pr: &pr {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, 🔯 非港故转, ♻️ 自动测速, ♻️ 非港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, REJECT, DIRECT]}
 pr2: &pr2 {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, 🔯 非港故转, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速]}
 # 策略组
 proxy-groups:
