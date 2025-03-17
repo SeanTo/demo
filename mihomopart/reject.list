@@ -4,3 +4,7 @@ DOMAIN-SUFFIX,sample.com
 
 # 国外
 
+ DOMAIN-KEYWORD,stun
+ DST-PORT,3478
+ DST-PORT,5349
+ 
