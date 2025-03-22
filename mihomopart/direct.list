@@ -12,14 +12,15 @@ DOMAIN-SUFFIX,asus.com.cn
 # 国内
 DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,cnblogs.com
-DOMAIN-SUFFIX,fitten-code.firebaseapp
 DOMAIN-SUFFIX,mi.com
-DOMAIN-KEYWORD,iqiyi
+DOMAIN-SUFFIX,douyin.com
+DOMAIN-SUFFIX,fitten-code.firebaseapp
 DOMAIN-KEYWORD,tianyancha
 DOMAIN-KEYWORD,harmonyos
 DOMAIN-KEYWORD,deepseek
 DOMAIN-KEYWORD,fittenlab
 DOMAIN-KEYWORD,fittentech
+DOMAIN-KEYWORD,iqiyi
 
 # Google China
 DOMAIN-SUFFIX,265.com
