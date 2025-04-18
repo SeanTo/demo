@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,d.metacubex.one
 # 国外
 DOMAIN-SUFFIX,asus.com
 DOMAIN-SUFFIX,asus.com.cn
+DOMAIN-SUFFIX,apple.com
 
 # 国内
 DOMAIN-SUFFIX,gov.cn
