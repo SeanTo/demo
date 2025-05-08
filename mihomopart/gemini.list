@@ -44,3 +44,8 @@ DOMAIN-SUFFIX,copilot-content.gallerycdn.vsassets.io
 
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+
+# tiktok
+
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokv.com		

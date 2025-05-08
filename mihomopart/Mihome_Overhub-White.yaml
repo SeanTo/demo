@@ -109,15 +109,15 @@ pr2: &pr2 {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 
 # 策略组
 proxy-groups:
   - {name: 🚀 手动指定, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|:|CFnat)).*$"}
-  - {name: 🚀 节点选择, type: select, proxies: [🔮 非港均衡, 🚀 手动指定, ♻️ 自动测速, ♻️ 非港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转]}
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, 🚀 手动指定, ♻️ 非港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转, 🔮 非港均衡]}
   - {name: 💬 AI,!!merge <<: *pr2}
   - {name: GLOBAL,!!merge <<: *pr}
-  - {name: 🔮 非港均衡, type: load-balance, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
   - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|🇨🇳|CN|CFnat)).*$"}
   - {name: ♻️ 非港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
   - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|CFnat)).*(🇭🇰|HK|香港).*$"}
   - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|CFnat)).*(🇺🇸|US|美国).*$"}
   - {name: 🔯 非港故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
+  - {name: 🔮 非港均衡, type: load-balance, include-all: true, tolerance: 30, interval: 180, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|测速|最新|维护|分享|中国|俄罗斯|伊朗|:|IPV6|🇨🇳|CN|CFnat|🇭🇰|HK|香港)).*$"}
 
 rules:
   - RULE-SET, private_domain, DIRECT
