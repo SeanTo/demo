@@ -2,9 +2,16 @@
 
 DOMAIN-SUFFIX,sample.com
 
-# 国外
+# 域名关键字匹配
 
  DOMAIN-KEYWORD,stun
  DST-PORT,3478
  DST-PORT,5349
  
+ 
+# 域名后缀匹配
+DOMAIN-SUFFIX,webrtc.org
+DOMAIN-SUFFIX,webrtc.net
+DOMAIN-SUFFIX,webex.com
+DOMAIN-SUFFIX,turnserver.com
+DOMAIN-SUFFIX,googleapis.com

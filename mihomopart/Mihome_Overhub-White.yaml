@@ -97,8 +97,11 @@ dns:
       - "https://dns.google/dns-query"
       - "https://doh.090227.xyz/dns-query"
   nameserver-policy:
+    "rule-set:mi_proxy":
+      - https://dns.cloudflare.com/dns-query
+      - https://dns.google/dns-query
     "rule-set:private_domain,ChinaMedia,mi_direct":
-    - 223.5.5.5
+      - 223.5.5.5
     "rule-set:geolocation-!cn":
       - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"
@@ -126,7 +129,6 @@ rules:
   - RULE-SET, mi_direct, DIRECT
   - RULE-SET, ChinaMedia, DIRECT
   - RULE-SET, gemini, 💬 AI
-  - RULE-SET, ai, 💬 AI
   - RULE-SET, geolocation-!cn, 🚀 节点选择
   - MATCH, GLOBAL
 rule-anchor:
@@ -141,7 +143,6 @@ rule-providers:
   mi_direct: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/direct.list"}
   ChinaMedia: {!!merge <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaMedia.list"}
   gemini: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/gemini.list"}
-  ai: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
   geolocation-!cn: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
 
 experimental:
