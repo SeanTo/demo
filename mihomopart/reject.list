@@ -2,13 +2,6 @@
 
 DOMAIN-SUFFIX,sample.com
 
-# 域名关键字匹配
-DOMAIN-KEYWORD,stun
-
-# 端口匹配（常用于 WebRTC 的 STUN/TURN 服务器）
-DST-PORT,3478
-DST-PORT,5349
-
 # 域名后缀匹配
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,webrtc.net
@@ -20,5 +13,10 @@ DOMAIN-SUFFIX,stun.com
 DOMAIN-SUFFIX,stunprotocol.org
 DOMAIN-SUFFIX,stunserver.org
 DOMAIN-SUFFIX,turn.com
-DOMAIN-SUFFIX,meet.google.com
-DOMAIN-SUFFIX,zoom.us
+
+# 域名关键字匹配
+DOMAIN-KEYWORD,stun
+
+# 端口匹配（常用于 WebRTC 的 STUN/TURN 服务器）
+DST-PORT,3478
+DST-PORT,5349
