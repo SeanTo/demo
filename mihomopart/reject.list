@@ -14,7 +14,6 @@ DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,webrtc.net
 DOMAIN-SUFFIX,webex.com
 DOMAIN-SUFFIX,turnserver.com
-DOMAIN-SUFFIX,googleapis.com
 
 # 其他常见的 WebRTC 相关域名
 DOMAIN-SUFFIX,stun.com

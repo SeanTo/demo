@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,vv.video.qq.com
 
 DOMAIN-KEYWORD,cloudflare
 DOMAIN-KEYWORD,whois
+DOMAIN-SUFFIX,googleapis.com
 
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,vercel.app
