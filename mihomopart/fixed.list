@@ -1,12 +1,20 @@
 # 尽量避免跳 IP 的域名
 
 # TikTok
+# TikTok Global Domains
 
-DOMAIN,tiktok.com
+# 通用主域
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,tiktokv.com
 DOMAIN-SUFFIX,tiktokd.com
+DOMAIN-SUFFIX,tiktokglobalshop.com
+DOMAIN-SUFFIX,tiktokshop.com
+DOMAIN-SUFFIX,tiktokvstatic.com
+DOMAIN-SUFFIX,ttoversea.net
+DOMAIN-SUFFIX,tik-tokapi.com
+
+# 字节跳动相关
 DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,bytecdn.net
 DOMAIN-SUFFIX,ibytedtos.com
@@ -14,12 +22,19 @@ DOMAIN-SUFFIX,ipstatp.com
 DOMAIN-SUFFIX,muscdn.com
 DOMAIN-SUFFIX,musical.ly
 DOMAIN-SUFFIX,sgpstatp.com
-DOMAIN-SUFFIX,tik-tokapi.com
-DOMAIN-SUFFIX,tiktokglobalshop.com
-DOMAIN-SUFFIX,tiktokshop.com
-DOMAIN-SUFFIX,tiktokvstatic.com
-DOMAIN-SUFFIX,ttoversea.net
-DOMAIN-SUFFIX,p16-tiktokcdn-com.akamaized.net
+
+# 美国 CDN 与 Web 接口
+DOMAIN,webcast.us.tiktok.com
+DOMAIN,v16-webapp-prime.us.tiktok.com
+DOMAIN,starling.tiktokv.us
+DOMAIN,p19-pu-sign-useast8.tiktokcdn-us.com
+DOMAIN,p16-common-sign-va.tiktokcdn-us.com
+DOMAIN,lf16-tiktok-common.tiktokcdn-us.com
+DOMAIN,mon16-normal-useast5.tiktokv.us
+DOMAIN,mssdk.tiktokw.us
+DOMAIN,libraweb.tiktokw.us
+
+# 通配收录
+DOMAIN-SUFFIX,tiktokcdn-us.com
 DOMAIN-SUFFIX,tiktokv.us
 DOMAIN-SUFFIX,tiktokw.us
-DOMAIN-SUFFIX,tiktokcdn-us.com
