@@ -1,0 +1,22 @@
+# 尽量避免跳 IP 的域名
+
+# TikTok
+
+DOMAIN,tiktok.com
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokd.com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,bytecdn.net
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,ipstatp.com
+DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,sgpstatp.com
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-SUFFIX,tiktokglobalshop.com
+DOMAIN-SUFFIX,tiktokshop.com
+DOMAIN-SUFFIX,tiktokvstatic.com
+DOMAIN-SUFFIX,ttoversea.net
+DOMAIN-SUFFIX,p16-tiktokcdn-com.akamaized.net
