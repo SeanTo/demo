@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,asus.com.cn
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,gl-inet.cn
 
 # 国内
 DOMAIN-SUFFIX,gov.cn
