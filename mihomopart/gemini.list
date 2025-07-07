@@ -56,9 +56,9 @@ DOMAIN-KEYWORD,generativelanguage
 
 DOMAIN,copilot.microsoft.com
 
-# Github Copilot
+# Github copilot
 
-DOMAIN-KEYWORD,cocopilot
+DOMAIN-KEYWORD,copilot
 DOMAIN,api.github.com
 DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN-SUFFIX,githubcopilot.com
