@@ -30,6 +30,11 @@ DOMAIN-KEYWORD,deepseek
 DOMAIN-KEYWORD,fittenlab
 DOMAIN-KEYWORD,fittentech
 DOMAIN-KEYWORD,iqiyi
+DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+DOMAIN-SUFFIX,s3.amazonaws.com
+DOMAIN-SUFFIX,duostories.org
+DOMAIN-KEYWORD,duolingo
 
 # Google China
 DOMAIN-SUFFIX,265.com
