@@ -22,19 +22,15 @@ DOMAIN-SUFFIX,com.cn
 DOMAIN-SUFFIX,juejin.cn
 DOMAIN-SUFFIX,cnblogs.com
 DOMAIN-SUFFIX,mi.com
-DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,fitten-code.firebaseapp
 DOMAIN-KEYWORD,tianyancha
 DOMAIN-KEYWORD,harmonyos
 DOMAIN-KEYWORD,deepseek
 DOMAIN-KEYWORD,fittenlab
 DOMAIN-KEYWORD,fittentech
-DOMAIN-KEYWORD,iqiyi
-DOMAIN-SUFFIX,duolingo.com
-DOMAIN-SUFFIX,duolingo.cn
 DOMAIN-SUFFIX,s3.amazonaws.com
-DOMAIN-SUFFIX,duostories.org
-DOMAIN-KEYWORD,duolingo
+DOMAIN-KEYWORD,iqiyi
+DOMAIN-SUFFIX,douyin.com
 
 # Google China
 DOMAIN-SUFFIX,265.com
@@ -1340,4 +1336,3 @@ DOMAIN-SUFFIX,tcss.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 DOMAIN-SUFFIX,ugdtimg.com
 DOMAIN-SUFFIX,wit.qq.com
-

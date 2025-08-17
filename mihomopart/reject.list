@@ -1,8 +1,11 @@
 # 国内
 
 DOMAIN-SUFFIX,sample.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,toutiao.com
+DOMAIN-SUFFIX,kuaishou.com
 
-# 域名后缀匹配
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,webrtc.net
 DOMAIN-SUFFIX,webex.com
