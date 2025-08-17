@@ -3,8 +3,13 @@
 DOMAIN-SUFFIX,sample.com
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,toutiao.com
 DOMAIN-SUFFIX,kuaishou.com
+DOMAIN-SUFFIX,sigmcb.cn
+DOMAIN-SUFFIX,tange365.com
+DOMAIN-SUFFIX,adkwai.com
+DOMAIN-SUFFIX,wkanx.com
+DOMAIN-SUFFIX,bcdbos.com
+KEYWORD,toutiao
 
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,webrtc.net
