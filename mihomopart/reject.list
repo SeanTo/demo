@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,sample.com
 # DOMAIN-SUFFIX,gdt.qq.com
 # DOMAIN-SUFFIX,adkwai.com
 # DOMAIN-SUFFIX,kuaishou.com
-KEYWORD,toutiao
+# KEYWORD,toutiao
 
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,webrtc.net
