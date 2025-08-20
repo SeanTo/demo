@@ -32,8 +32,8 @@ DOMAIN-SUFFIX,s3.amazonaws.com
 DOMAIN-KEYWORD,iqiyi
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,doubao.com
-DOMAIN-SUFFIX,quark.org
 #DOMAIN-SUFFIX,bs-iot.com
+KEYWORD,quark
 
 # Google China
 DOMAIN-SUFFIX,265.com
