@@ -115,22 +115,23 @@ dns:
       - "https://dns.google/dns-query"
  
 # 锚点
-pr: &pr {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔮 轮询均衡, 🔮 散列均衡, REJECT, DIRECT]}
-pr2: &pr2 {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔮 轮询均衡, 🔮 散列均衡]}
+pr: &pr {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转, 🔮 轮询均衡, 🔮 散列均衡, REJECT, DIRECT]}
+pr2: &pr2 {type: select, proxies: [🔯 非港故转, ♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔮 轮询均衡, 🔮 散列均衡]}
 # 策略组
 proxy-groups:
-  - {name: 🚀 手动指定, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|:|CFnat)).*$"}
+  - {name: 🚀 手动指定, type: select, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|中国|:|CFnat)).*$"}
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动测速, 🚀 手动指定, ♻️ 非港测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转, 🔮 轮询均衡, 🔮 散列均衡]}
+  - {name: 💬 Tiktok,!!merge <<: *pr2}
   - {name: 💬 AI,!!merge <<: *pr2}
   - {name: GLOBAL,!!merge <<: *pr}
-  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*$"}
-  - {name: ♻️ 非港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|随机|测速|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
-  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*(🇭🇰|HK|香港).*$"}
-  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*(🇺🇸|US|美国).*$"}
-  - {name: 🔯 非港故转, type: fallback, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|随机|测速|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
-  - {name: 🔮 轮询均衡, type: load-balance, strategy: round-robin, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*$"}
-#  - {name: 🔮 散列均衡, type: load-balance, strategy: consistent-hashing, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*$"}
-  - {name: 🔮 散列均衡, type: load-balance, strategy: sticky-sessions, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{4,}|关注|加入|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*$"}
+  - {name: ♻️ 自动测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*$"}
+  - {name: ♻️ 非港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|优选|中国|俄罗斯|伊朗|中国|🇨🇳|CN|随机|其它|未识别|群|CMCC|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
+  - {name: 🇭🇰 香港测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*(🇭🇰|HK|香港).*$"}
+  - {name: 🇺🇸 美国测速, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat)).*(🇺🇸|US|美国).*$"}
+  - {name: 🔯 非港故转, type: fallback, include-all: true, tolerance: 30, interval: 180, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|优选|中国|俄罗斯|伊朗|中国|🇨🇳|CN|随机|其它|未识别|群|CMCC|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
+  - {name: 🔮 轮询均衡, type: load-balance, strategy: round-robin, include-all: true, tolerance: 30, interval: 180, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
+#  - {name: 🔮 散列均衡, type: load-balance, strategy: consistent-hashing, include-all: true, tolerance: 30, interval: 180, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
+  - {name: 🔮 散列均衡, type: load-balance, strategy: sticky-sessions, include-all: true, tolerance: 30, interval: 180, filter: "^(?!.*([0-9]{3,}|关注|加入|提供|网站|频道|地址|剩余|套餐|过期|时间|有效|无效|失效|最新|维护|分享|中国|俄罗斯|伊朗|中国|🇨🇳|CN|:|IPV6|CFnat|🇭🇰|HK|香港)).*$"}
 
 rules:
   - RULE-SET, private_domain, DIRECT
@@ -138,6 +139,7 @@ rules:
   - RULE-SET, mi_proxy, 🚀 节点选择
   - RULE-SET, mi_direct, DIRECT
   - RULE-SET, ChinaMedia, DIRECT
+  - RULE-SET, tiktok, 💬 Tiktok
   - RULE-SET, gemini, 💬 AI
   - RULE-SET, geolocation-!cn, 🚀 节点选择
   - MATCH, GLOBAL
@@ -154,6 +156,7 @@ rule-providers:
   mi_direct: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/direct.list"}
   ChinaMedia: {!!merge <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaMedia.list"}
   gemini: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/gemini.list"}
+  tiktok: {!!merge <<: *class, url: "https://raw.githubusercontent.com/SeanTo/demo/refs/heads/main/mihomopart/fixed.list"}
   geolocation-!cn: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
 
 experimental:
