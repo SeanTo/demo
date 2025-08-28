@@ -12,6 +12,8 @@ DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,gl-inet.cn
+DOMAIN-SUFFIX,media.steampowered.com
+DOMAIN-SUFFIX,cdn.akamai.steamstatic.com
 
 # 国内
 DOMAIN-SUFFIX,12306.cn
