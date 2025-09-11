@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,media.steampowered.com
 DOMAIN-SUFFIX,cdn.akamai.steamstatic.com
 
 # 国内
+DOMAIN-SUFFIX,139.com
 DOMAIN-SUFFIX,10086.cn
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,gov.cn
