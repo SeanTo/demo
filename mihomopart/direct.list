@@ -46,6 +46,8 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ce.cn
 DOMAIN-SUFFIX,cnr.cn
+DOMAIN-SUFFIX,gmw.cn
+DOMAIN-SUFFIX,youth.cn
 
 # Google China
 DOMAIN-SUFFIX,265.com
