@@ -16,15 +16,6 @@ DOMAIN-SUFFIX,media.steampowered.com
 DOMAIN-SUFFIX,cdn.akamai.steamstatic.com
 
 # 国内1
-DOMAIN-KEYWORD,tianyancha
-DOMAIN-KEYWORD,harmonyos
-DOMAIN-KEYWORD,deepseek
-DOMAIN-KEYWORD,fittenlab
-DOMAIN-KEYWORD,fittentech
-DOMAIN-KEYWORD,quark
-DOMAIN-KEYWORD,iqiyi
-
-# 国内2
 DOMAIN-SUFFIX,com.cn
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,soul.com
@@ -48,6 +39,16 @@ DOMAIN-SUFFIX,ce.cn
 DOMAIN-SUFFIX,cnr.cn
 DOMAIN-SUFFIX,gmw.cn
 DOMAIN-SUFFIX,youth.cn
+
+# 国内2
+DOMAIN-KEYWORD,deepseek
+DOMAIN-KEYWORD,fittenlab
+DOMAIN-KEYWORD,fittentech
+DOMAIN-KEYWORD,quark
+DOMAIN-KEYWORD,baidu
+DOMAIN-KEYWORD,harmonyos
+DOMAIN-KEYWORD,iqiyi
+DOMAIN-KEYWORD,tianyancha
 
 # Google China
 DOMAIN-SUFFIX,265.com
