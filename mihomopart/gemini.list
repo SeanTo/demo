@@ -87,3 +87,6 @@ DOMAIN-SUFFIX,copilot-content.gallerycdn.vsassets.io
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
+# Claude
+
+DOMAIN-SUFFIX,grok.com
