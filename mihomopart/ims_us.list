@@ -1,0 +1,10 @@
+# Tello / T-Mobile Wi-Fi Calling
+# ePDG / IMS
+
+DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,3gppnetwork.org
+
+# IPSec / NAT-T
+DST-PORT,500
+DST-PORT,4500
