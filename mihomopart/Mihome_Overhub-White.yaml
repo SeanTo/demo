@@ -119,7 +119,7 @@ dns:
       - "https://dns.google/dns-query"
 
 # 锚点
-pr: &pr {type: select, proxies: [♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转, 🔮 轮询均衡, 🔮 散列均衡, REJECT, DIRECT]}
+pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 非港测速, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔯 非港故转, 🔮 轮询均衡, 🔮 散列均衡, REJECT, DIRECT]}
 pr2: &pr2 {type: select, proxies: [🔯 非港故转, ♻️ 非港测速, 🚀 节点选择, 🚀 手动指定, ♻️ 自动测速, 🇭🇰 香港测速, 🇺🇸 美国测速, 🔮 轮询均衡, 🔮 散列均衡]}
 pr3: &pr3 {type: select, proxies: [🇺🇸 美国测速, 🚀 手动指定]}
 # 策略组
