@@ -143,10 +143,10 @@ rules:
   - RULE-SET, mi_reject, REJECT
   - RULE-SET, mi_proxy, 🚀 节点选择
   - RULE-SET, mi_direct, DIRECT
-  - RULE-SET, ChinaMedia, DIRECT
   - RULE-SET, tiktok, 💬 Tiktok
   - RULE-SET, gemini, 💬 AI
   - RULE-SET, ims_us, 💬 IMS_US
+  - RULE-SET, ChinaMedia, DIRECT
   - RULE-SET, geolocation-!cn, 🚀 节点选择
   - MATCH, GLOBAL
 
