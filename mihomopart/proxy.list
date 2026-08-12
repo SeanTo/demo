@@ -1,15 +1,15 @@
 # 国内
 
+# DOMAIN-SUFFIX,browserleaks.com
+# DOMAIN-KEYWORD,cloudflare
+
 
 # 国外
 
-DOMAIN-KEYWORD,cloudflare
-DOMAIN-KEYWORD,whois
+# DOMAIN-KEYWORD,whois
+
 DOMAIN-SUFFIX,googleapis.com
-
-DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,vercel.app
-
 DOMAIN-SUFFIX,steamcommunity.computeinit
 DOMAIN-SUFFIX,api.steampowered.com
 DOMAIN-SUFFIX,store.steampowered.com
