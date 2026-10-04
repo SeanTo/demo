@@ -33,7 +33,8 @@ DOMAIN-SUFFIX,cnblogs.com
 DOMAIN-SUFFIX,mi.com
 DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,getui.com
-DOMAIN-SUFFIX,mijia.tech
+DOMAIN-SUFFIX,volces.com
+DOMAIN-SUFFIX,api.mijia.tech
 DOMAIN-SUFFIX,fitten-code.firebaseapp
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,doubao.com
@@ -46,6 +47,7 @@ DOMAIN-SUFFIX,cnr.cn
 DOMAIN-SUFFIX,gmw.cn
 DOMAIN-SUFFIX,youth.cn
 DOMAIN-SUFFIX,wuyou.net
+DOMAIN-SUFFIX,ruian.com
 
 # 国内2
 DOMAIN-KEYWORD,deepseek
